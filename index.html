@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Get from Drive</h1>
+      <h2>Fetch products</h2>
+      <div class="input">
+        <input
+          type="text"
+          name="hersteller"
+          id="hid"
+          placeholder="Hersteller"
+        />
+        <input type="text" name="modell" id="mid" placeholder="Modell" />
+        <input
+          type="text"
+          name="technologie"
+          id="tid"
+          placeholder="Technologiestufe"
+        />
+      </div>
+      <div>
+        <button id="fetch" onclick="getSelectedData();">FETCH</button>
+      </div>
+
+      <div>
+        <table id="dataDisplay">
+          <tr id="tableheader">
+            <th>Hersteller</th>
+            <th>Modell</th>
+            <th>Technologiestufe</th>
+            <th>Bauform</th>
+            <th>Aufladbar</th>
+            <th>Preis</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+html {
+  font-family: Sans-serif, Monospace;
+}
+h1 {
+  width: 100%;
+  color: #4c4c4c;
+  font-size: 1em;
+}
+h2 {
+  width: 100%;
+  font-size: 1em;
+  color: #c6c6c6;
+}
+
+input {
+  border: none;
+  background-color: #ddd7d7;
+  padding: 0.5em;
+  font-weight: 700;
+  font-size: 0.7em;
+}
+
+button {
+  background-color: #69009d;
+  color: white;
+  padding: 0.4em 1em;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  margin: 1em 0.5em 4em 0.5em;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #69009d;
+  margin: 5em 3em;
+}
