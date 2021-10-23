@@ -63,3 +63,8 @@ a:active {
   background-color: #2400ff;
   cursor: wait;
 }
+
+.navbar {
+  width: 100%;
+  text-align: center;
+}
