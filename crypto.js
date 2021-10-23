@@ -17,6 +17,7 @@ function getCryptoHttp() {
       var cryptoData = JSON.parse(xhrequest.response);
       console.log(cryptoData);
       insertData(cryptoData);
+      clearArray(cryptoData);
     } else {
       console.log(`error ${xhrequest.status} ${xhrequest.statusText}`);
     }
@@ -40,12 +41,15 @@ function getCryptoJquery() {}
 
 function insertData(payload) {
   console.log("in Insert Function:" + payload);
-  const table = document.getElementById("dataDisplay");
+  var table = document.getElementById("dataDisplay");
+  // resets the potentially previously added tableBody elements
+  table.innerHTML = "";
   console.log(table);
   console.log("payload is " + payload);
   console.log("0,0= " + payload[0]);
+
   for (let i = 0; i < payload.length; i++) {
-    let row = table.insertRow(i + 1);
+    let row = table.insertRow(i);
 
     let cell1 = row.insertCell(0);
     let cell2 = row.insertCell(1);
@@ -60,5 +64,11 @@ function insertData(payload) {
     cell4.innerHTML = payload[i].bidPrice;
     cell5.innerHTML = payload[i].bidQty;
     cell6.innerHTML = payload[i].volume;
+  }
+}
+
+function clearArray(array) {
+  while (array.length) {
+    array.pop();
   }
 }
