@@ -34,13 +34,17 @@ function getSelectedData() {
   }
 
   displayData(reqData);
+  clearArray(reqData);
 }
 
 function displayData(reqData) {
-  //Starting to display data
-  const table = document.getElementById("dataDisplay");
+  // Starting to display data
+  var table = document.getElementById("dataDisplay");
 
-  for (let i = 1; i < reqData.length; i++) {
+  // resets the potentially previously added tableBody elements
+  table.innerHTML = "";
+
+  for (let i = 0; i < reqData.length; i++) {
     let row = table.insertRow(i);
 
     let cell1 = row.insertCell(0);
@@ -56,5 +60,11 @@ function displayData(reqData) {
     cell4.innerHTML = reqData[i].Bauform;
     cell5.innerHTML = reqData[i].Aufladbar;
     cell6.innerHTML = reqData[i].Preis;
+  }
+}
+
+function clearArray(array) {
+  while (array.length) {
+    array.pop();
   }
 }
