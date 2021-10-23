@@ -38,3 +38,28 @@ table {
   border: 1px solid #69009d;
   margin: 5em 3em;
 }
+
+#container {
+  margin: 2em;
+}
+
+footer {
+  width: 100%;
+  margin: 2em;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+a {
+  color: #2400ff;
+  text-decoration: none;
+  background-color: #e1c300;
+}
+
+a:hover,
+a:active {
+  color: #e1c300;
+  text-decoration: none;
+  background-color: #2400ff;
+  cursor: wait;
+}

@@ -33,6 +33,10 @@ function getSelectedData() {
     );
   }
 
+  displayData(reqData);
+}
+
+function displayData(reqData) {
   //Starting to display data
   const table = document.getElementById("dataDisplay");
 
