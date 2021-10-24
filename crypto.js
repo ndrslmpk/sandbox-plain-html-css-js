@@ -1,9 +1,11 @@
 // var cryptoData;
 
+const cryptoDataUrl = "https://api2.binance.com/api/v3/ticker/24hr";
+
 function getCryptoHttp() {
   let xhrequest = new XMLHttpRequest();
 
-  xhrequest.open("GET", "https://api2.binance.com/api/v3/ticker/24hr"); // just configures the request without opening the connection
+  xhrequest.open("GET", cryptoDataUrl); // just configures the request without opening the connection
   // xhrequest.responseType = "json";
   xhrequest.send(); // actually opens the connection and sends the request to the target (server)
   xhrequest.onload = () => {
@@ -33,7 +35,21 @@ function getCryptoHttp() {
   };
 }
 
-function getCryptoFetch() {}
+function getCryptoFetch() {
+  let response = fetch(cryptoDataUrl)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      insertData(data);
+    });
+}
+
+async function getCryptoAsyncFetch() {
+  let response = await fetch(cryptoDataUrl);
+  let data = await response.json();
+  insertData(data);
+}
 
 function getCryptoAxios() {}
 
